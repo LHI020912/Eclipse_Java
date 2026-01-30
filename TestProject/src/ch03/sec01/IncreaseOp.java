@@ -1,4 +1,4 @@
-package ch03;
+package ch03.sec01;
 
 public class IncreaseOp {
 
@@ -35,6 +35,9 @@ public class IncreaseOp {
 		System.out.println("y= "+y); //9
 		System.out.println("x= "+x); //15
 		System.out.println("z= "+z); //23
+		
+		//비트 반전 연산자
+		System.out.println("10을 ~연산 적용하면? : "+ ~10);
 	}
 
 }
