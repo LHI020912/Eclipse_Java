@@ -1,0 +1,32 @@
+package test;
+
+public class SongProject {
+    public static void main(String[] args) {
+        System.out.println("=== earlliee ===\n");
+
+        // 가사 배열 (가사 내용, 글자당 속도ms, 줄 바꿈 후 대기 시간ms)
+        displayLine("Hindi mo ba ako lilisanin?", 100, 1000);
+        displayLine("Hindi pa ba sapat pagpapahirap sa 'kin?", 100, 1500);
+    }
+
+    public static void displayLine(String line, int charSpeed, int lineDelay) {
+        for (char c : line.toCharArray()) {
+            System.out.print(c);
+            // 자바는 출력 스트림을 강제로 비워줘야 실시간으로 보입니다.
+            System.out.flush(); 
+            
+            try {
+                Thread.sleep(charSpeed); // 글자 간격 (밀리초 단위)
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        System.out.println(); // 줄 바꿈
+        
+        try {
+            Thread.sleep(lineDelay); // 다음 줄 시작 전 대기
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}
