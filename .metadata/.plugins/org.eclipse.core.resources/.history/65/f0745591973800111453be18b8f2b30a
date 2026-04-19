@@ -1,0 +1,70 @@
+package test;
+
+public class NoDoubtFull {
+	public class NoDoubtFull {
+	    // 가사 정보 객체
+	    static class Lyrics {
+	        String text;
+	        int charSpeed;
+	        int lineDelay;
+
+	        Lyrics(String text, int charSpeed, int lineDelay) {
+	            this.text = text;
+	            this.charSpeed = charSpeed;
+	            this.lineDelay = lineDelay;
+	        }
+	    }
+    public static void main(String[] args) {
+
+    	    public static void main(String[] args) throws InterruptedException {
+    	        // 가사 전체 배열 (가사, 글자속도ms, 다음줄까지 대기ms)
+    	        Lyrics[] song = {
+    	            new Lyrics("[Intro: Instrumental]", 50, 4200), // 시작 전 약 4.2초 대기
+    	            new Lyrics("Girl where you at?", 60, 600),
+    	            new Lyrics("해가 떠서 질 때까지", 70, 400),
+    	            new Lyrics("난 계속 불안해", 70, 1000),
+    	            new Lyrics("By the end of the day", 70, 300),
+    	            new Lyrics("미치겠어 Miss you", 80, 2000),
+    	            
+    	            new Lyrics("눈부신 낮은 내겐 영원 같은 Waiting", 60, 500),
+    	            new Lyrics("가혹한 이 Fate 너를 그리는 Daydream", 60, 500),
+    	            new Lyrics("널 원하면 원할수록 I feel so lonely", 60, 500),
+    	            new Lyrics("시작된 이 망상들은 끝까지 날 Push me", 60, 1500),
+    	            
+    	            new Lyrics("지옥 같은 시간에 난 깨달아", 70, 300),
+    	            new Lyrics("낮이 됐건 밤이 됐건 의심 없이 I love you", 70, 2000),
+    	            
+    	            new Lyrics("[Chorus]", 0, 500),
+    	            new Lyrics("Ain't no doubt 넌 나의 답", 50, 400),
+    	            new Lyrics("No worries 난 괜찮아", 50, 400),
+    	            new Lyrics("널 원해 괴롭지만", 50, 300),
+    	            new Lyrics("Oh 날 태워 증명해 Baby no doubt", 60, 2000),
+    	            
+    	            new Lyrics("No exit 갈증의 낮", 50, 400),
+    	            new Lyrics("본능이 원해 너만", 50, 400),
+    	            new Lyrics("널 원해 괴롭지만", 50, 300),
+    	            new Lyrics("Oh 날 태워 증명해 Baby no doubt", 60, 1500),
+    	            
+    	            new Lyrics("Yeah no doubt", 100, 300),
+    	            new Lyrics("Yeah baby no doubt", 100, 300),
+    	            new Lyrics("Yeah no doubt", 100, 1000),
+    	            new Lyrics("Oh 날 태워 증명해 Baby no doubt", 60, 2000)
+    	            // ... (나머지 가사들도 동일한 방식으로 추가 가능합니다)
+    	        };
+
+    	        System.out.println("🎧 ENHYPEN - No Doubt (재생 버튼을 누르고 시작하세요!)");
+    	        Thread.sleep(1000);
+
+    	        for (Lyrics line : song) {
+    	            for (char c : line.text.toCharArray()) {
+    	                System.out.print(c);
+    	                System.out.flush();
+    	                Thread.sleep(line.charSpeed);
+    	            }
+    	            System.out.println();
+    	            Thread.sleep(line.lineDelay);
+    	        }
+    	        
+    	        System.out.println("\n✨ 재생 종료");
+    	    }
+    	}
